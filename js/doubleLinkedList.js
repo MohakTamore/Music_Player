@@ -24,8 +24,9 @@ class DoubllyLinkedList {
   push(name, length, path) {
     const newNode = new Node(name, length, path);
     if (this.length === 0) {
-      this.head = newNode;
+      this.head = newNode;  
       this.tail = newNode;
+      
     } else {
       this.tail.next = newNode;
       newNode.prev = this.tail;
@@ -44,6 +45,7 @@ class DoubllyLinkedList {
   traverse(direction) {
     // forward direction
     if (direction === 1 && this.tempPos.next != null) {
+      // console.log(this.tempPos)
       this.tempPos = this.tempPos.next;
       return this.tempPos.musicNode;
     } else if (direction === -1 && this.tempPos.prev != null) {
@@ -70,19 +72,19 @@ class DoubllyLinkedList {
 // inserting music in double linked list
 const dll = new DoubllyLinkedList();
 dll.push(
-  "Shipping Lanes",
+  "Vikram",
   1,
-  "https://files.freemusicarchive.org/storage-freemusicarchive-org/music/WFMU/Broke_For_Free/Directionless_EP/Broke_For_Free_-_01_-_Night_Owl.mp3"
+  "C:\\scanner\\LinkedList\\song1.mp3"
 );
 dll.push(
-  "Enthusiast",
+  "Dance ka Bhoot",
   2,
-  "https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Tours/Enthusiast/Tours_-_01_-_Enthusiast.mp3"
+  "C:\\scanner\\LinkedList\\song2.mp3"
 );
 dll.push(
-  "Night Owl",
+  "South",
   3,
-  "https://files.freemusicarchive.org/storage-freemusicarchive-org/music/ccCommunity/Chad_Crouch/Arps/Chad_Crouch_-_Shipping_Lanes.mp3"
+  "C:\\scanner\\LinkedList\\song1.mp3"
 );
 
 dll.setDefaulltPointer();

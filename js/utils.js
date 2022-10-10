@@ -38,7 +38,9 @@ function updateMusicSlider() {
     let instantTime = Math.ceil(musicObj.currentTime);
     let duration = Math.ceil(musicObj.duration);
     let durationMin = Math.floor(duration / 60);
+    // console.log(durationMin)
     let durationSec = Math.floor(duration % 60);
+    // console.log(durationSec)
 
     let currentMin = Math.floor(instantTime / 60);
     let currentSec = Math.floor(instantTime % 60);
